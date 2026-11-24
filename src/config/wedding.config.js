@@ -9,7 +9,7 @@ const weddingConfig = {
 
   couple: {
     groom: {
-      en: 'k Krishna',
+      en: 'Krishna',
       te: 'కృష్ణ', // TODO: confirm Telugu spelling
     },
     bride: {
