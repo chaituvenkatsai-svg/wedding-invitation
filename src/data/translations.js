@@ -1,0 +1,81 @@
+// All the fixed words on the website, in both languages.
+// Names, dates and venue come from src/config/wedding.config.js instead.
+
+const translations = {
+  en: {
+    nav: {
+      home: 'Home',
+      story: 'Our Story',
+      invitation: 'Invitation',
+      events: 'Events',
+      gallery: 'Gallery',
+      venue: 'Venue',
+    },
+    blessing: ['Sri Rasthu', 'Subhamasthu', 'Avighnamasthu'],
+    weddingOf: 'The Wedding of',
+    explore: 'Explore Invitation',
+    countdown: { days: 'Days', hours: 'Hours', minutes: 'Minutes', seconds: 'Seconds', done: 'Today is the day. Join us!' },
+    welcome: {
+      title: 'Welcome',
+      text: 'With the blessings of God and our elders, we joyfully invite you to share in the beginning of our new life together. Your presence and good wishes will make our celebration complete.',
+    },
+    story: {
+      title: 'About the Couple',
+      groomRole: 'The Groom',
+      brideRole: 'The Bride',
+      text: 'Two families, one celebration. Our full story, in our own words, will be added here soon.',
+    },
+    family: { title: 'Our Families', groomSide: 'Groom’s Family', brideSide: 'Bride’s Family' },
+    events: { title: 'Wedding Events', ceremony: 'Wedding Ceremony', reception: 'Dinner' },
+    gallery: { title: 'Gallery', empty: 'Our photographs will appear here soon.' },
+    venue: { title: 'Venue', directions: 'Get Directions', mapTitle: 'Wedding venue on Google Maps' },
+    final: {
+      title: 'With Warm Regards',
+      text: 'We solicit your gracious presence with family at the auspicious occasion of the marriage. Your blessings are the greatest gift.',
+      yours: 'Yours',
+      compliments: 'With best compliments from: Near & Dear',
+    },
+    langToggle: 'తెలుగు',
+    menu: 'Menu',
+    close: 'Close',
+  },
+  te: {
+    nav: {
+      home: 'హోమ్',
+      story: 'మా కథ',
+      invitation: 'ఆహ్వానం',
+      events: 'కార్యక్రమాలు',
+      gallery: 'గ్యాలరీ',
+      venue: 'వేదిక',
+    },
+    blessing: ['శ్రీ రస్తు', 'శుభమస్తు', 'అవిఘ్నమస్తు'],
+    weddingOf: 'వివాహ మహోత్సవం',
+    explore: 'ఆహ్వానాన్ని చూడండి',
+    countdown: { days: 'రోజులు', hours: 'గంటలు', minutes: 'నిమిషాలు', seconds: 'సెకన్లు', done: 'ఈ రోజే శుభదినం. తప్పక రండి!' },
+    welcome: {
+      title: 'స్వాగతం',
+      text: 'భగవంతుని ఆశీస్సులతో, పెద్దల దీవెనలతో మా నూతన జీవితం ప్రారంభమయ్యే ఈ శుభ సందర్భానికి మిమ్మల్ని సాదరంగా ఆహ్వానిస్తున్నాము. మీ రాక, మీ శుభాకాంక్షలు మా వేడుకను పరిపూర్ణం చేస్తాయి.',
+    },
+    story: {
+      title: 'వధూవరుల పరిచయం',
+      groomRole: 'వరుడు',
+      brideRole: 'వధువు',
+      text: 'రెండు కుటుంబాలు, ఒక వేడుక. మా కథ త్వరలో ఇక్కడ చేరుస్తాము.',
+    },
+    family: { title: 'మా కుటుంబాలు', groomSide: 'వరుని కుటుంబం', brideSide: 'వధువు కుటుంబం' },
+    events: { title: 'వివాహ కార్యక్రమాలు', ceremony: 'వివాహ సుముహూర్తం', reception: 'విందు' },
+    gallery: { title: 'గ్యాలరీ', empty: 'మా ఛాయాచిత్రాలు త్వరలో ఇక్కడ కనిపిస్తాయి.' },
+    venue: { title: 'వేదిక', directions: 'దారి చూపించు', mapTitle: 'గూగుల్ మ్యాప్స్‌లో వివాహ వేదిక' },
+    final: {
+      title: 'ఆత్మీయ ఆహ్వానం',
+      text: 'ఈ శుభ సందర్భంలో కుటుంబ సమేతంగా విచ్చేసి వధూవరులను ఆశీర్వదించవలసిందిగా సవినయంగా కోరుతున్నాము. మీ దీవెనలే మాకు గొప్ప కానుక.',
+      yours: 'ఇట్లు',
+      compliments: 'శుభాకాంక్షలతో: బంధుమిత్రులు',
+    },
+    langToggle: 'English',
+    menu: 'మెనూ',
+    close: 'మూసివేయి',
+  },
+};
+
+export default translations;
