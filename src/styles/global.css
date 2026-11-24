@@ -190,3 +190,15 @@ html[lang='te'] .final__hosts { font-family: var(--font-telugu-heading); font-si
 .final__compliments { font-size: 0.9rem; }
 .footer { background: var(--maroon-deep); color: var(--gold-soft); text-align: center; padding: 26px 16px; font-size: 0.85rem; letter-spacing: 0.08em; }
 .footer p { margin: 0; }
+/* ============ Phase 1 polish ============ */
+/* Numbers: use normal (lining) figures so "10" does not look like "1o" */
+body { font-variant-numeric: lining-nums; }
+
+/* Keep the top flowers below the menu bar and make all four corners softer */
+.floral-corner { width: clamp(90px, 18vw, 200px); opacity: 0.55; }
+.floral-corner--tl, .floral-corner--tr { top: var(--nav-height); }
+.hero__content { padding-bottom: 110px; }
+
+/* Equal-sized countdown boxes */
+.countdown__unit { width: clamp(60px, 18vw, 92px); min-width: 0; padding-inline: 2px; }
+.countdown__label { letter-spacing: 0.1em; font-size: 0.64rem; }
