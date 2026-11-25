@@ -10,11 +10,11 @@ const weddingConfig = {
   couple: {
     groom: {
       en: 'Krishna',
-      te: 'కృష్ణ',  spelling
+      te: 'కృష్ణ',
     },
     bride: {
       en: 'Kartheeka',
-      te: 'కార్తీక',  spelling
+      te: 'కార్తీక',
     },
   },
 
