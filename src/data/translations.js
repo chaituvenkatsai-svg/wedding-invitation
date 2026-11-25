@@ -36,8 +36,10 @@ const translations = {
       compliments: 'With best compliments from: Near & Dear',
     },
     invitation: {
-      tapToOpen: 'Tap the seal to open',
+      tapToOpen: 'Tap to Open',
       invited: 'You are invited',
+      envelopeTitle: 'Wedding Invitation',
+      visitSite: 'Visit our wedding website',
       solicit: 'We solicit your gracious presence with family at the auspicious occasion of the marriage of our only son',
       with: 'with',
       chiGroom: 'Chi.',
@@ -92,8 +94,10 @@ const translations = {
       compliments: 'శుభాకాంక్షలతో: బంధుమిత్రులు',
     },
     invitation: {
-      tapToOpen: 'తెరవడానికి ముద్రపై నొక్కండి',
+      tapToOpen: 'తెరవడానికి నొక్కండి',
       invited: 'మీకు ఆహ్వానం',
+      envelopeTitle: 'వివాహ ఆహ్వానం',
+      visitSite: 'మా వివాహ వెబ్‌సైట్ చూడండి',
       solicit: 'మా ఏకైక కుమారుని వివాహ శుభ సందర్భంగా, మీరు కుటుంబ సమేతంగా విచ్చేసి వధూవరులను ఆశీర్వదించవలసిందిగా సవినయంగా కోరుతున్నాము',
       with: 'తో',
       chiGroom: 'చి.',

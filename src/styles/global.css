@@ -270,3 +270,39 @@ html[lang='te'] .card__hosts { font-family: var(--font-telugu-heading); font-siz
 .share__title { color: var(--gold-soft); margin: 0 0 14px; font-size: 0.9rem; letter-spacing: 0.08em; }
 .share__buttons { display: flex; flex-wrap: wrap; justify-content: center; gap: 12px; }
 .invitation-replay { display: block; margin: 26px auto 0; color: var(--gold-soft); font-size: 0.85rem; text-decoration: underline; text-underline-offset: 3px; }
+
+/* ============ Phase 3: envelope as the landing screen ============ */
+.invitation-page--stage { position: relative; display: flex; flex-direction: column; min-height: 100vh; min-height: 100svh; overflow: hidden; }
+/* Double gold border frame around the whole screen */
+.invitation-page--stage::before {
+  content: ''; position: absolute; inset: 10px; pointer-events: none; z-index: 1;
+  border: 1px solid rgba(212, 179, 106, 0.75); outline: 1px solid rgba(212, 179, 106, 0.3); outline-offset: 5px;
+}
+.invitation-page--stage .invitation-bar { position: relative; z-index: 3; padding-inline: 18px; }
+.invitation-page--stage .envelope-stage { flex: 1; justify-content: center; padding-top: 0; padding-bottom: 6vh; position: relative; z-index: 2; transition: opacity 0.5s ease, transform 0.5s ease; }
+.envelope-stage--leaving { opacity: 0; transform: scale(1.04); }
+
+.envelope-stage__kicker { margin: 0 0 6px; color: var(--gold-soft); font-size: 0.78rem; letter-spacing: 0.24em; text-transform: uppercase; }
+html[lang='te'] .envelope-stage__kicker { letter-spacing: 0.05em; text-transform: none; font-size: 1rem; }
+.envelope-stage__title { font-size: clamp(2rem, 7vw, 3rem); font-weight: 500; margin: 0 0 30px; }
+.envelope-stage__names { margin: 26px 0 0; font-family: var(--font-heading); font-size: clamp(1.5rem, 5vw, 2rem); color: var(--ivory); }
+html[lang='te'] .envelope-stage__names { font-family: var(--font-telugu-heading); font-size: clamp(1.3rem, 5vw, 1.7rem); }
+.envelope-stage__hint { margin-top: 18px; }
+.envelope { width: min(420px, 82vw); cursor: pointer; }
+.envelope:disabled { cursor: default; }
+
+/* Floating gold particles */
+.particles { position: absolute; inset: 0; overflow: hidden; pointer-events: none; z-index: 0; }
+.particles span { position: absolute; bottom: -10px; border-radius: 50%; background: radial-gradient(circle, #f3dc9a, var(--gold)); opacity: 0; animation: floatUp linear infinite; }
+@keyframes floatUp {
+  0% { transform: translateY(0) translateX(0); opacity: 0; }
+  12% { opacity: 0.75; }
+  85% { opacity: 0.5; }
+  100% { transform: translateY(-105vh) translateX(18px); opacity: 0; }
+}
+
+.btn--outline-gold { border: 1px solid var(--gold-soft); color: var(--gold-soft); }
+.btn--outline-gold:hover { background: var(--gold-soft); color: var(--maroon-deep); }
+.invitation-site-link { display: table; margin: 26px auto 0; }
+
+@media (prefers-reduced-motion: reduce) { .particles { display: none; } }
