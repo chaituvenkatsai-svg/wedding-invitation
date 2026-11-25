@@ -30,7 +30,7 @@ export default function Home() {
   const mapsEmbed = `https://www.google.com/maps?q=${encodeURIComponent(venue.mapsQuery)}&output=embed`;
 
   return (
-    <>
+    <div className="page-enter">
       <Navbar />
       <MusicButton />
       {openPhoto !== null && (
@@ -185,6 +185,6 @@ export default function Home() {
           {couple.groom[lang]} &amp; {couple.bride[lang]} · {ceremony.dateLabel[lang]}
         </p>
       </footer>
-    </>
+    </div>
   );
 }

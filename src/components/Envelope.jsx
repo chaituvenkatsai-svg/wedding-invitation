@@ -1,6 +1,8 @@
 import { useEffect, useRef, useState } from 'react';
 import { useLanguage } from '../services/LanguageContext.jsx';
+import { useMusic } from '../services/MusicContext.jsx';
 import weddingConfig from '../config/wedding.config.js';
+import EnvelopeArt from './EnvelopeArt.jsx';
 
 // Timings in milliseconds
 const LEAVE_AT = 2300; // the envelope starts to fade away
@@ -24,6 +26,7 @@ const PARTICLES = [
 
 export default function Envelope({ onOpened }) {
   const { lang, t } = useLanguage();
+  const { start: startMusic } = useMusic();
   const { couple } = weddingConfig;
   const [opening, setOpening] = useState(false);
   const [leaving, setLeaving] = useState(false);
@@ -35,6 +38,7 @@ export default function Envelope({ onOpened }) {
   const open = () => {
     if (locked.current) return;
     locked.current = true;
+    startMusic(); // the tap on the seal is the "first touch" that lets the music begin
     setOpening(true);
     timers.current.push(setTimeout(() => setLeaving(true), LEAVE_AT));
     timers.current.push(setTimeout(onOpened, OPEN_TIME));
@@ -76,6 +80,7 @@ export default function Envelope({ onOpened }) {
             <em>&</em>
             {couple.bride[lang]}
           </span>
+          <EnvelopeArt />
         </span>
 
         <span className="envelope__front" />
