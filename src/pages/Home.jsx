@@ -47,16 +47,16 @@ export default function Home() {
             <SectionTitle>{t.story.title}</SectionTitle>
             <div className="couple-grid">
               <article className="person-card reveal">
-                <div className="person-card__photo" aria-hidden="true">
-                  <span>{couple.groom.en[0]}</span>
+                <div className="person-card__photo">
+                  <img src={assetUrl('images/krishna.jpg')} alt={`${couple.groom.en}, the groom`} width="600" height="600" loading="lazy" />
                 </div>
                 <p className="eyebrow">{t.story.groomRole}</p>
                 <h3>{couple.groom[lang]}</h3>
                 <p className="muted">{family.groomNote[lang]}</p>
               </article>
               <article className="person-card reveal">
-                <div className="person-card__photo" aria-hidden="true">
-                  <span>{couple.bride.en[0]}</span>
+                <div className="person-card__photo">
+                  <img src={assetUrl('images/kartheeka.jpg')} alt={`${couple.bride.en}, the bride`} width="600" height="600" loading="lazy" />
                 </div>
                 <p className="eyebrow">{t.story.brideRole}</p>
                 <h3>{couple.bride[lang]}</h3>
