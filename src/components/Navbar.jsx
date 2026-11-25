@@ -1,4 +1,5 @@
 import { useEffect, useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import { Menu, X } from 'lucide-react';
 import { useLanguage } from '../services/LanguageContext.jsx';
 
@@ -19,6 +20,7 @@ export function scrollToSection(id) {
 
 export default function Navbar() {
   const { t, toggleLang } = useLanguage();
+  const navigate = useNavigate();
   const [open, setOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
 
@@ -39,6 +41,11 @@ export default function Navbar() {
 
   const go = (id) => {
     setOpen(false);
+    // The Invitation link opens the separate envelope page.
+    if (id === 'invitation') {
+      navigate('/invitation');
+      return;
+    }
     // Wait a moment so the menu can close before scrolling.
     setTimeout(() => scrollToSection(id), 50);
   };

@@ -1,14 +1,15 @@
+import { useNavigate } from 'react-router-dom';
 import { useLanguage } from '../services/LanguageContext.jsx';
 import weddingConfig from '../config/wedding.config.js';
 import Countdown from './Countdown.jsx';
 import { FloralCorner, GoldDivider } from './Ornaments.jsx';
-import { scrollToSection } from './Navbar.jsx';
 
 // Turns "images/hero.jpg" into a URL that also works on GitHub Pages sub-folders.
 const assetUrl = (path) => `${import.meta.env.BASE_URL}${path}`;
 
 export default function Hero() {
   const { lang, t } = useLanguage();
+  const navigate = useNavigate();
   const { couple, ceremony, venue, images, weddingDateTime } = weddingConfig;
 
   const groom = couple.groom[lang];
@@ -55,7 +56,7 @@ export default function Hero() {
         <button
           className="btn btn--gold fade-up"
           style={{ animationDelay: '2.1s' }}
-          onClick={() => scrollToSection('invitation')}
+          onClick={() => navigate('/invitation')}
         >
           {t.explore}
         </button>
