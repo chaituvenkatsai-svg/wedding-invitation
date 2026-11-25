@@ -35,7 +35,7 @@ jobs:
           extracted = Path("/tmp/wedding-site")
           items = list(extracted.iterdir())
 
-          source = items[0] if len(items) == 1 and items[0].is_dir() else extracted
+          source = items[0] if len(items) == 1 and items[0].is_dir() and items[0].name != "src" else extracted
 
           for item in source.iterdir():
               if item.name in {".git", ".github", "wedding-invitation-phase1.zip"}:
