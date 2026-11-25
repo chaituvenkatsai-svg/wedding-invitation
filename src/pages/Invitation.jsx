@@ -5,6 +5,7 @@ import { useLanguage } from '../services/LanguageContext.jsx';
 import Envelope from '../components/Envelope.jsx';
 import InvitationCard from '../components/InvitationCard.jsx';
 import ShareBar from '../components/ShareBar.jsx';
+import MusicButton from '../components/MusicButton.jsx';
 
 // This is the first screen every guest sees (the sealed envelope).
 // Public link: https://chaituvenkatsai-svg.github.io/wedding-invitation/
@@ -45,6 +46,7 @@ export default function Invitation() {
           </button>
         </div>
       )}
+      <MusicButton />
     </div>
   );
 }

@@ -10,11 +10,11 @@ const weddingConfig = {
   couple: {
     groom: {
       en: 'Krishna',
-      te: 'కృష్ణ', // TODO: confirm Telugu spelling
+      te: 'కృష్ణ',  spelling
     },
     bride: {
       en: 'Kartheeka',
-      te: 'కార్తీక', // TODO: confirm Telugu spelling
+      te: 'కార్తీక',  spelling
     },
   },
 
@@ -22,11 +22,11 @@ const weddingConfig = {
     // TODO: confirm who these two couples are (parents? guardians?) and the exact wording
     groomParents: {
       en: 'Karri Nookaraju, Smt. Durga (late) & Karri Prakash, Smt. Latha',
-      te: 'కర్రి నూకరాజు, శ్రీమతి దుర్గ (లేట్) & కర్రి ప్రకాష్, శ్రీమతి లత', // TODO: confirm
+      te: 'కర్రి నూకరాజు, శ్రీమతి దుర్గ (లేట్) & కర్రి ప్రకాష్, శ్రీమతి లత',
     },
     brideParents: {
       en: 'Sri Kaladi Srinu, Smt. Satyaveni of Kakinada',
-      te: 'శ్రీ కలాడి శ్రీను, శ్రీమతి సత్యవేణి, కాకినాడ', // TODO: confirm
+      te: 'శ్రీ కలాడి శ్రీను, శ్రీమతి సత్యవేణి, కాకినాడ',
     },
     brideNote: {
       en: 'Elder daughter of Sri Kaladi Srinu & Smt. Satyaveni of Kakinada',
@@ -34,7 +34,7 @@ const weddingConfig = {
     },
     groomNote: {
       en: 'Only son of the Karri family',
-      te: 'కర్రి కుటుంబ ఏకైక కుమారుడు', // TODO: confirm
+      te: 'కర్రి కుటుంబ ఏకైక కుమారుడు',
     },
   },
 
@@ -48,16 +48,16 @@ const weddingConfig = {
   dinner: {
     title: { en: 'Dinner', te: 'విందు' },
     dateLabel: { en: 'Thursday, 10th December 2026', te: 'గురువారం, 10 డిసెంబర్ 2026' },
-    // TODO: your printed card says "7-00 a.m onwards". Dinner is almost certainly 7:00 PM. Please confirm.
+    // Confirmed by the family: dinner is at 7:00 PM.
     time: { en: '7:00 PM onwards', te: 'రాత్రి 7:00 నుండి' },
     note: { en: 'At the venue', te: 'వివాహ వేదిక వద్దే' },
   },
 
   venue: {
-    name: { en: 'Pattana Komula Velama Samkshema Sangam', te: 'పట్టణ కోమూల వెలమ సంక్షేమ సంఘం' }, // TODO: confirm Telugu
+    name: { en: 'Pattana Komula Velama Samkshema Sangam', te: 'పట్టణ కోమూల వెలమ సంక్షేమ సంఘం' }, 
     address: {
       en: 'Paseela Vari Street, Near Krishna Temple, Peddapuram',
-      te: 'పాసీల వారి వీధి, కృష్ణ దేవాలయం దగ్గర, పెద్దాపురం', // TODO: confirm
+      te: 'పాసీల వారి వీధి, కృష్ణ దేవాలయం దగ్గర, పెద్దాపురం',
     },
     // Opens Google Maps with a search. Replace with the exact map link once you have it.
     mapsQuery: 'Pattana Komula Velama Samkshema Sangam, Peddapuram',
@@ -68,11 +68,20 @@ const weddingConfig = {
     te: 'కర్రి నూకరాజు, శ్రీమతి దుర్గ (లేట్) · కర్రి ప్రకాష్, శ్రీమతి లత',
   },
 
-  // Photos: put image files in public/images/ and list them here.
-  // Empty slots show an elegant placeholder until you add real photos.
+  // Photos live in public/images/. Paths here are relative to that "public" folder.
+  // Each gallery photo has a small "thumb" (fast grid) and a "full" copy (full-screen viewer).
   images: {
-    hero: '', // e.g. 'images/hero.jpg'
-    gallery: [], // e.g. ['images/1.jpg', 'images/2.jpg']
+    hero: 'images/hero.jpg',
+    gallery: [
+      { thumb: 'images/gallery/1-thumb.jpg', full: 'images/gallery/1.jpg', width: 900, height: 505, alt: 'Krishna and Kartheeka, leaning together' },
+      { thumb: 'images/gallery/2-thumb.jpg', full: 'images/gallery/2.jpg', width: 900, height: 505, alt: 'Krishna and Kartheeka holding their wedding garlands' },
+      { thumb: 'images/gallery/3-thumb.jpg', full: 'images/gallery/3.jpg', width: 505, height: 900, alt: 'Krishna and Kartheeka exchanging garlands' },
+      { thumb: 'images/gallery/4-thumb.jpg', full: 'images/gallery/4.jpg', width: 900, height: 505, alt: 'Krishna and Kartheeka seated together in their garlands' },
+      { thumb: 'images/gallery/5-thumb.jpg', full: 'images/gallery/5.jpg', width: 505, height: 900, alt: 'Krishna and Kartheeka looking at each other' },
+      { thumb: 'images/gallery/6-thumb.jpg', full: 'images/gallery/6.jpg', width: 505, height: 900, alt: 'Krishna and Kartheeka standing arm in arm' },
+      { thumb: 'images/gallery/7-thumb.jpg', full: 'images/gallery/7.jpg', width: 505, height: 900, alt: 'Kartheeka and Krishna holding hands' },
+      { thumb: 'images/gallery/8-thumb.jpg', full: 'images/gallery/8.jpg', width: 900, height: 505, alt: 'Kartheeka touching Krishna’s cheek' },
+    ],
   },
 };
 

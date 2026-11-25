@@ -3,6 +3,7 @@ import { createRoot } from 'react-dom/client';
 import { HashRouter } from 'react-router-dom';
 import App from './App.jsx';
 import { LanguageProvider } from './services/LanguageContext.jsx';
+import { MusicProvider } from './services/MusicContext.jsx';
 import './styles/global.css';
 
 // HashRouter keeps links like  site.com/#/invitation  which work on GitHub Pages,
@@ -11,7 +12,9 @@ createRoot(document.getElementById('root')).render(
   <StrictMode>
     <HashRouter>
       <LanguageProvider>
-        <App />
+        <MusicProvider>
+          <App />
+        </MusicProvider>
       </LanguageProvider>
     </HashRouter>
   </StrictMode>

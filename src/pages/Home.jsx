@@ -1,5 +1,8 @@
+import { useState } from 'react';
 import { CalendarHeart, MapPin, Clock, UtensilsCrossed } from 'lucide-react';
 import Navbar from '../components/Navbar.jsx';
+import Lightbox from '../components/Lightbox.jsx';
+import MusicButton from '../components/MusicButton.jsx';
 import Hero from '../components/Hero.jsx';
 import { GoldDivider, Toranam } from '../components/Ornaments.jsx';
 import useReveal from '../components/useReveal.js';
@@ -20,6 +23,7 @@ function SectionTitle({ children }) {
 export default function Home() {
   const { lang, t } = useLanguage();
   const { couple, family, ceremony, dinner, venue, hosts, images } = weddingConfig;
+  const [openPhoto, setOpenPhoto] = useState(null); // index of the photo shown full-screen
   useReveal();
 
   const mapsLink = `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(venue.mapsQuery)}`;
@@ -28,6 +32,10 @@ export default function Home() {
   return (
     <>
       <Navbar />
+      <MusicButton />
+      {openPhoto !== null && (
+        <Lightbox photos={images.gallery} index={openPhoto} onChange={setOpenPhoto} onClose={() => setOpenPhoto(null)} />
+      )}
       <main>
         <Hero />
 
@@ -116,9 +124,17 @@ export default function Home() {
               <p className="lead muted reveal">{t.gallery.empty}</p>
             ) : (
               <div className="gallery-grid">
-                {images.gallery.map((src, i) => (
-                  <figure className="gallery-item reveal" key={src}>
-                    <img src={assetUrl(src)} alt={`Wedding photo ${i + 1}`} loading="lazy" />
+                {images.gallery.map((photo, i) => (
+                  <figure className="gallery-item reveal" key={photo.full}>
+                    <button type="button" onClick={() => setOpenPhoto(i)} aria-label={photo.alt}>
+                      <img
+                        src={assetUrl(photo.thumb)}
+                        alt={photo.alt}
+                        width={photo.width}
+                        height={photo.height}
+                        loading="lazy"
+                      />
+                    </button>
                   </figure>
                 ))}
               </div>
