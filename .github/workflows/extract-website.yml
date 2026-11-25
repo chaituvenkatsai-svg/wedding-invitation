@@ -18,7 +18,7 @@ jobs:
       - name: Extract website ZIP
         run: |
           set -e
-          ZIP="wedding-invitation-phase1.zip"
+          ZIP="wedding-invitation-phase4.zip"
 
           if [ ! -f "$ZIP" ]; then
             echo "ZIP file not found!"
@@ -38,7 +38,7 @@ jobs:
           source = items[0] if len(items) == 1 and items[0].is_dir() and items[0].name != "src" else extracted
 
           for item in source.iterdir():
-              if item.name in {".git", ".github", "wedding-invitation-phase1.zip"}:
+              if item.name in {".git", ".github", "wedding-invitation-phase4.zip"}:
                   continue
 
               target = Path.cwd() / item.name
